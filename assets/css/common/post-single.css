@@ -194,10 +194,21 @@
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
-    font-size: 0.78em;
+    /* font-size: 0.78em; */
     line-height: 1.5;
     background: var(--code-bg);
     border-radius: 2px;
+
+    /* font-family: var(--code-font); */
+    font-size: 95%;
+    /* line-height: 140%; */
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    background: #f0f3f3;
+    border-radius: 7px;
+    color: var(--highlight);
 }
 
 .post-content pre code {
