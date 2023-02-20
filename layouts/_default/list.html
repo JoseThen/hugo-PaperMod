@@ -62,7 +62,7 @@
 {{- end }}
 
 <article class="{{ $class }}" {{- if (not .Params.cover.image) }} style="display: block;" {{end}}>
-  <div style="display: grid; grid-template-rows: auto auto auto;">
+  <div style="display: grid; grid-template-rows: 1fr auto 1fr;">
   <header class="entry-header">
     <h2>
       {{- .Title }}
