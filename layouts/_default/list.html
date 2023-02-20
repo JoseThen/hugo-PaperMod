@@ -61,9 +61,8 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
-<article class="{{ $class }}">
-  {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+<article class="{{ $class }}" {{- if (not .Params.cover.image) }} style="display: block;" {{end}}>
+  <div style="display: grid; grid-template-rows: auto auto auto;">
   <header class="entry-header">
     <h2>
       {{- .Title }}
@@ -80,6 +79,9 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
+</div>
+  {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}

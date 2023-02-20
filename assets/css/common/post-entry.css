@@ -41,6 +41,9 @@
     border-radius: var(--radius);
     transition: transform 0.1s;
     border: 1px solid var(--border);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr auto auto;
 }
 
 .post-entry:active {
@@ -96,6 +99,7 @@
     pointer-events: none;
     width: 100%;
     height: auto;
+    margin-left: auto;
 }
 
 .entry-cover a {

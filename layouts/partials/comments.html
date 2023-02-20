@@ -1,3 +1,15 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+<div class="comments">
+        <div class="utterance"></div>
+    </div>
+    <script
+        src="https://utteranc.es/client.js"
+        repo="System-Kraken/recog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme='github-{{- if eq site.Params.defaultTheme `light` -}}{{- print  "light" }}{{- else -}} {{- print "dark" }}{{- end -}}'
+        crossorigin="anonymous"
+        async
+    ></script>
 {{- /* Comments area end */ -}}

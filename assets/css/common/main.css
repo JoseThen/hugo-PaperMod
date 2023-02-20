@@ -47,6 +47,8 @@ code {
 div.highlight,
 pre {
     position: relative;
+    border-radius: var(--radius);
+    transition: transform .1s;
 }
 
 .copy-code {
